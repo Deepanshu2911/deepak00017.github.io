@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Getter and Setter</title>
+        <link rel="stylesheet" href="jQueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jQueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQueryUI/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>widget manipulation</h2> 
+        <button id="btn1">click me</button> <br><br>
+        <div id="mydiv"></div>
+        <div id="messagebox" class="rep" title="School">
+            <p>this is a dummy <b>paragraph</b> </p>
+            <img src="Deepu.jpg" id="img" width="50" height="50"/>
+        </div>
+        <div id="panels">
+            <h3>Deepu</h3>
+            <p> Deepu is a nice guy. deepu looking for an internship</p>
+            <h3>Aditi</h3>
+            <p>she is a tatti girl. sitting idle lol</p>
+            <h3>Ram</h3>
+            <p>what a sweet guy he is. hanuman hai unka bhakt laxman hai unka bhai kesse hai aap log</p>
+        </div>
+    </body>
+    <script src="jQuery/jquery.js" type="text/javascript"></script>
+    
+    
+
+    <script src="jQueryUI/jquery-ui.js" type="text/javascript"></script>
+    
+    <script>
+        $("#mydiv").datepicker({
+            changeMonth : true,
+            changeYear : true,
+            showWeek : true,
+            weekHeader : "weeks"
+        });
+        $("#messagebox").dialog({
+            title : "Message box",
+            draggable : true,
+            resizable : true,
+            height : 300,
+            width : 300,
+            
+        });
+        $("#panels").accordion({
+            collapsible : true,
+            event : "click",
+            animate : 300,
+            active : 0,
+            heightStyle : true,
+            icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+        });
+        $("#btn1").click(function(){
+            // GETTer Method
+            //var height = $("#messagebox").dialog("option","height");
+            //alert(height);
+            //SETTER Method
+            var height = $("#messagebox").dialog("option","resizable",false);
+            var height = $("#messagebox").dialog("option","draggable",false);
+            //var height = $("#messagebox").dialog("option","height",500);
+        });
+
+    </script>
+</html>

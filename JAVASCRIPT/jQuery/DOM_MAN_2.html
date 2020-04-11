@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>DOM MANIPULATION 2</title>
+        <link rel="stylesheet" href="DOM_MAN_2.css">
+    </head>
+    <body>
+        <h2>DOM MANIPULATION 2</h2>
+        <button id="btn1"> Set Value </button>
+        <button id="btn2"> Get Value </button>
+        <div id="div1" class="mydivs">
+            <p id="p1" class="p1class" value="Hello World">This is third <b>paragraph</b> in <i>first</i> div</p>
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#btn1").click(function(){
+                $("#p1").attr("class","p2class");
+            });
+            $("#btn2").click(function(){
+                alert($("#p1").attr("class"));
+            });
+        });
+    </script>
+</html>

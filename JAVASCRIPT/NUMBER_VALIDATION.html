@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>NUMBER VALIDATION</title>
+        <script type="text/javascript">
+            /* \d = match any digit (equal to [0-9])
+               \w = match any word character (equal to [a-z,A-Z,0-9 & _])
+               \s = match white spaces (e.g. spaces & tabs)
+               \t = match a tab only */
+            function validate()
+            {
+                var text = document.getElementById("text1").value;
+                var regx=/^[7-9]\d{9}$/;
+                if(regx.test(text))
+                {
+                    document.getElementById("lbluser").innerHTML="Valid";
+                    document.getElementById("lbluser").style.visibility="visible";
+                    document.getElementById("lbluser").style.color="Green";
+                }
+                else
+                {
+                    document.getElementById("lbluser").innerHTML="Invalid";
+                    document.getElementById("lbluser").style.visibility="visible";
+                    document.getElementById("lbluser").style.color="Red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <input type="text" id="text1" placeholder="CellPhone">
+            <label id="lbluser" style="color: red;visibility: hidden;">Invalid</label>
+            <br><br>
+            <button onclick="validate()" id="btn1" type="button"> Submit</button> 
+        </form>  
+    </body>
+</html>

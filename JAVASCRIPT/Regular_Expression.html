@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>REGULAR EXPRESSION</title>
+        <script type="text/javascript">
+            /*What Is a Regular Expression?
+            A regular expression is a sequence of characters that forms a search pattern.
+            When you search for data in a text, you can use this search pattern to describe what you are searching for.
+            A regular expression can be a single character or a more complicated pattern.
+            Regular expressions can be used to perform all types of text search and text replace operations.
+            A regular expression in JS is an object that describes a pattern of characters.
+            The JavaScript RegExp class represents regular expressions, and both String and RegExp define methods that use regular expressions to perform powerful pattern-matching and search-and-replace functions on the text.*/
+            function validate()
+            {
+                var username = document.getElementById("txt1").value;
+                regx = /E00/;
+                if(regx.test(username))
+                {
+                    alert("valid"); 
+                    true;
+                }
+                else
+                {
+                    alert("invalid");
+                    document.getElementById("txt1").style.border="solid 1px red";
+                    document.getElementById("lbluser").style.visibility="visible";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="MESSAGE_FOR_FORM.html">
+            <input type="text" id="txt1" placeholder="Username"/>
+            <label id="lbluser" style="color: red;visibility: hidden;">Invalid Username</label>
+            <br><br>
+            <button onclick="validate()" type="button">Submit</button>
+        </form>
+    </body>
+</html>

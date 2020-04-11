@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>GET ELEMENT BY TAGNAME</title>
+        <script type="text/javascript">
+            function ChangeStyling()
+            {
+                var para=document.getElementsByClassName("hat");
+                for (var i=0;i<para.length;i++)
+                {
+                    para[i].style.color = "red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p class="hat">This is Paragraph 1</p>
+        <p>This is Paragraph 2</p>
+        <p class="hat">This is Paragraph 3</p>
+        <p class="hat">This is Paragraph 4</p>
+        <p>This is Paragraph 5</p>
+        <br>
+        <button onclick="ChangeStyling()">Click Me</button>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>ON AND OUT MOUSE EVENT</title>
+        <script type="text/javascript">
+        function SetNewImage()
+        {
+            document.getElementById("img1").src="DEEP.jpg";
+        }
+        function SetOldImage()
+        {
+            document.getElementById("img1").src="deepu.jpg";
+        }
+        </script>
+    </head>
+    <body>
+        <img id="img1" onmouseover="SetNewImage()" onmouseout="SetOldImage()" src="Deepu.jpg" width="100">
+    </body>
+</html>

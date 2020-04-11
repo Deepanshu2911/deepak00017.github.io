@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Radio Button</title>
+        <script type="text/javascript">
+            function fn1()
+            {
+                var str1 = document.getElementById("txt1");
+                var str2 = document.getElementById("txt2");
+                if (str1.checked==true)
+                {
+                    alert("the channel selected is : "+ str1.value);
+                }
+                else if (str2.checked==true)
+                {
+                    alert("the channel selected is : "+ str2.value);
+                }
+                else
+                {
+                    alert("select any one of those");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+        <input id="txt1" name="grp1" type="radio" value="Simple snippets"> Simple </input>
+        <br>
+        <input id="txt2" name="grp1" type="radio" value="Telusko"> telusko </input>
+        <br><br>
+        <button onclick="fn1()" id="btn1">Click Me</button>
+    </body>
+</html>

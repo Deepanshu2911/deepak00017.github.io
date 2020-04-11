@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>DOM MANIPULATION 3</title>
+        <link rel="stylesheet" href="DOM_MAN_3.css">
+    </head>
+    <!--Three simple, but useful, jQuery methods for DOM manipulation are:
+        append() - Inserts content at the end of the selected elements.
+        prepend() - Inserts content at the beginning of the selected elements.
+        after() - Inserts content after the selected elements.
+        before() - Inserts content before the selected elements.   
+        remove() - Removes the selected element (and its child elements).
+        empty() - Removes the child elements from the selected elements. -->
+    <body>
+        <h2>DOM MANIPULATION 3</h2>
+        <button id="btn1"> Append </button>
+        <button id="btn2"> After </button>
+        <button id="btn3"> prepend </button>
+        <button id="btn4"> Before </button>
+        <button id="btn5"> Remove </button>
+        <button id="btn6"> Empty </button>
+        <br><br>
+        <div id="firstdiv" class="mydivs">
+            <p id="p1" class="p1class" value="Hello World"> This is first <b>paragraph</b> in first div</p>
+            <p id="p2" class="p2class"> This is second <b>paragraph</b> in first div</p>
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#firstdiv").append("<p> this is 2nd para in <i>first</i> division </p>");
+            });
+            $("#btn2").click(function(){
+                $("#firstdiv").after("<p> this is 2nd para in <i>first</i> division </p>");
+            });
+            $("#btn3").click(function(){
+                $("#firstdiv").prepend("<p> this is 2nd para in <i>first</i> division </p>");
+            });
+            $("#btn4").click(function(){
+                $("#firstdiv").before("<p> this is 2nd para in <i>first</i> division </p>");
+            });
+            //Remove
+            $("#btn5").click(function(){
+                //$("#firstdiv").remove();
+                $("p").remove("#p2,#p1");
+            });
+            //Empty
+            $("#btn6").click(function(){
+                $("#firstdiv").empty();
+            });
+        });
+    </script>
+</html>

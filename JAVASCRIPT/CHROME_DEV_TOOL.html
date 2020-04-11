@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>CHROME DEVELOPER TOOL</title>
+        <script type="text/javascript">
+            function addValue()
+            {
+                var a = document.getElementById("txt1").value;
+                var b = document.getElementById("txt2").value;
+                document.getElementById("str").innerHTML="Result = "+ a+b;
+                console.log(a+b);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="text 1" id="txt1">
+        <br><br>
+        <input type="text" placeholder="text 2" id="txt2">
+        <br><br>
+        <button onclick="addValue()" id="btn1"> Add </button>
+        <br>
+        <h2 id="str"> Result = </h2>
+    </body>
+</html>

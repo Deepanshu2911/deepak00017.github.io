@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>ZOOM IN AND ZOOM OUT</title>
+        <script type="text/javascript">
+            var width=100;
+            var difference=2;
+            var intervalID=0;
+            //document.getElementById("img1").style.width=width;
+            function increase()
+            {
+                clearInterval(intervalID);
+                intervalID=setInterval(zoomin,10);
+            }
+            function zoomin()
+            {
+                if(width<150)
+                {
+                    width=width+difference;
+                    document.getElementById("img1").style.width=width;
+                    console.log(width);
+                }
+                else{
+                    clearInterval(intervalID);
+                }
+            }
+            function decrease()
+            {
+                clearInterval(intervalID);
+                intervalID=setInterval(zoomout,10);
+            }
+            
+            function zoomout()
+            {
+                if(width>100)
+                {
+                    width=width-difference;
+                    document.getElementById("img1").style.width=width;
+                    console.log(width);
+                }
+                else{
+                    clearInterval(intervalID);
+                }
+            }
+         </script>
+    </head>
+    <body>
+        <img src="unnamed.png" width="100" id="img1" onmouseover="increase()" onmouseout="decrease()" >
+    </body>
+</html>

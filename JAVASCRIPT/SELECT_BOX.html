@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Selected Box</title>
+        <script type="text/javascript">
+            function fn1()
+            {
+                var str=document.getElementById("IB");
+                alert("YOU ARE A "+str.options[str.selectedIndex].value)
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Select what u r?</h1>
+        <select name="" id="IB">
+            <option value="Pagal">Pagal</option>
+            <option value="Tatti">Tatti</option>
+            <option value="Gobar">Gobar</option>
+        </select>
+        <br><br>
+        <button onclick="fn1()">Click Me</button>
+
+    </body>
+</html>

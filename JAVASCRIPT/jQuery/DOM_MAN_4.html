@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>DoM MANIPULATION 4</title>
+        <link rel="stylesheet" href="DOM_MAN_4.css">
+    </head>
+    <!--Three simple, but useful, jQuery methods for DOM manipulation are:
+        addClass() - Adds one or more classes to the selected elements
+        removeClass() - Removes one or more classes from the selected elements
+        toggleClass() - Toggles between adding/removing classes from the selected elements
+        css() - Sets or returns the style attribute-->
+    <body>
+        <h2>DOM MANIPULATION 4</h2>
+        <button id="btn1"> AddCase </button>
+        <button id="btn2"> RemoveClass </button>
+        <button id="btn3"> toggleClass </button>
+        <button id="btn4"> css </button>
+        <br><br>
+        <div id="div1" class="mydivs">
+            <p id="p1" class="p1class" value="Hello World">This is first <b>para</b> of first division</p>
+        </div>
+        <div id="div2">
+            <p id="p2" class="p2class" value="Hello World">This is first para of second division</p>
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+               $("#div1").addClass("newdivclass newparaclass");
+            });
+            $("#btn2").click(function(){
+               $("#div1").removeClass("newdivclass newparaclass");
+            });
+            $("#btn3").click(function(){
+               $("#div1").toggleClass("newdivclass newparaclass");
+            });
+            $("#btn4").click(function(){
+                $("#div1").css("font-size","20px");
+               //alert($("#div1").css("padding"));
+            });
+        });
+    </script>
+
+</html>

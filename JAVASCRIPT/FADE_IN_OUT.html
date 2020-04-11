@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>FADE_IN and FADE_OUT</title>
+        <script type="text/javascript">
+            var opacity=0;
+            var IDInterval=0;
+            function fadeout()
+            {
+               IDInterval= setInterval(hide,50);
+            }
+            function fadein()
+            {
+               IDInterval= setInterval(show,50);
+            }
+            function show()
+            {
+                var img = document.getElementById("img1");
+                opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                console.log(opacity);
+                if(opacity<1)
+                {
+                    opacity=opacity+0.1;
+                    img.style.opacity=opacity;
+                }
+                else
+                {
+                    clearInterval(IDInterval);
+                } 
+            }
+            function hide()
+            {
+                var img = document.getElementById("img1");
+                opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                console.log(opacity);
+                if(opacity>0)
+                {
+                    opacity=opacity-0.1;
+                    img.style.opacity=opacity;
+                }
+                else
+                {
+                    clearInterval(IDInterval);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" id="btn1" onclick="fadeout()"> Fade out </button>
+        <br><br>
+        <img style="opacity: 1;" src="Deepu.jpg" id="img1" width="100px">
+        <br><br>
+        <button type="button" id="btn2" onclick="fadein()"> Fade in </button>
+    </body>
+</html>

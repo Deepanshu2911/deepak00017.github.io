@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>FORM VALIDATION 1</title>
+        <script type="text/javascript">
+            function validate()
+            {
+               var uname = document.getElementById("user");
+               var pass = document.getElementById("pass");
+               if(uname.value.trim()=="")
+               {
+                   //alert("BLANK USERNAME");
+                   uname.style.border="solid 1px red";
+                   document.getElementById("lbluser").style.visibility="visible";
+                   return false;
+               }
+               else if(pass.value.trim()=="")
+               {
+                   //alert("BLANK PASSWORD");
+                   pass.style.border="solid 1px red";
+                   return false;
+                }
+                else if(pass.value.trim().length<5)
+                {
+                    //alert("Password Too Short")
+                    pass.style.border="solid 1px red";
+                    return false;
+                }
+                else
+                {
+                    true;
+                }
+               
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="MESSAGE_FOR_FORM.html">
+            <input id="user" type="text" placeholder="USERNAME" ></input>
+            <label id="lbluser" style="color: red; visibility: hidden;">Invalid</label>
+            <br><br>
+            <input id="pass" type="password" placeholder="PASSWORD" ></input>
+            <br><br>
+            <button id="btn1" type="submit" > Submit </button>
+        </form>
+    </body>
+</html>

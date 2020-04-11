@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>ACCORDION WIDGET</title>
+        <link rel="stylesheet" href="accordion.css">
+        <link rel="stylesheet" href="jQueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jQueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jQueryUI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>accordion example</h2>
+        <div id="panels">
+            <h3>Telusko learnings</h3>
+            <p>Telusko learnings is one of the largest platrform to learn educational programming in India</p>
+            <h3>Simple Snippets</h3>
+            <p>Telusko learnings is one of the largest platrform to learn tech educational programming in India</p>
+            <h3>MkBHD</h3>
+            <p>Telusko learnings is one of the largest platrform to learn cchaha educational programming in India</p>
+            <h3>Telusko learnings</h3>
+            <p>Telusko learnings is one of the largest platrform to learn educational programming in India</p>
+            <h3>Simple Snippets</h3>
+            <p>Telusko learnings is one of the largest platrform to learn tech educational programming in India</p>
+            <h3>MkBHD</h3>
+            <p>Telusko learnings is one of the largest platrform to learn cchaha educational programming in India</p>
+            <h3>Telusko learnings</h3>
+            <p>Telusko learnings is one of the largest platrform to learn educational programming in India</p>
+            <h3>Simple Snippets</h3>
+            <p>Telusko learnings is one of the largest platrform to learn tech educational programming in India</p>
+            <h3>MkBHD</h3>
+            <p>Telusko learnings is one of the largest platrform to learn cchaha educational programming in India</p>
+        </div>
+    </body>
+    <script src="jQuery/jquery.js" type="text/javascript"></script>
+    <script src="jQueryUI/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $("#panels").accordion({
+            collapsible : true,
+            event : "click",
+            animate : 300,
+            active : 3,
+            heightStyle : true,
+            icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+        });
+
+    </script>
+</html>

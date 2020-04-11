@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>EventS2</title>
+        <link rel="stylesheet" href="CALL.css"/>
+    </head>
+    <body>
+        
+        <h2>CALLBACK AND CHAINING EFFECT</h2>
+       
+        <button id="btn3"> TOGGLE </button>
+        <div id="firstdiv" class="mydivs">
+            <p>This is first paragraph in first division</p>
+            <p>This is second paragraph in first division</p>
+        </div>
+        <div id="seconddiv" class="mydivs">
+            <p>This is first paragraph in second division</p>
+        
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+           $("#btn3").click(function(){
+               $("#firstdiv").slideToggle(2000,function(){
+                alert("division is faded");
+               });
+               $("#seconddiv").slideUp(4000).slideDown(4000);
+           });
+        });
+    </script>
+</html>

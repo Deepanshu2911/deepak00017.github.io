@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>REGULAR EXPRESSION</title>
+        <script type="text/javascript">
+            function validate()
+            {
+                var username = document.getElementById("txt1").value;
+                //regx = new regExp["E00","i"];
+                //regx = /[a-x]imple/;
+                //regx = /[0-5]a[6-9]c;
+                //regx = /[^1abc]abc/;   USED FOR EXCLUDING any element
+                regx = /[spd]imple/;
+                if(regx.test(username))
+                {
+                    alert("valid");
+                    true;
+                }
+                else
+                {
+                    alert("invalid");
+                    document.getElementById("txt1").style.border="solid 1px red";
+                    document.getElementById("lbluser").style.visibility="visible";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="MESSAGE_FOR_FORM.html">
+            <input type="text" id="txt1" placeholder="Username"/>
+            <label id="lbluser" style="color: red;visibility: hidden;">Invalid Username</label>
+            <br><br>
+            <button onclick="validate()" type="button">Submit</button>
+        </form>
+    </body>
+</html>
